@@ -11,10 +11,10 @@ async function sendMail({
         host: process.env.SMTP_HOST,
         port: process.env.SMTP_PORT,
         secure: false,
-        // auth: {
-        //     user: process.env.SMTP_LOGIN,
-        //     pass: process.env.SMTP_PASSWORD
-        // }
+        auth: {
+            user: process.env.SMTP_LOGIN,
+            pass: process.env.SMTP_PASSWORD
+        }
 
     })
     let info = await transpoter.sendMail({

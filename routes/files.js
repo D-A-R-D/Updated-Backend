@@ -32,9 +32,9 @@ let upload = multer({
 // })
 router.post('/', (req, res) => {
     ///store file
-
     upload(req, res, async(err) => {
         //validate request
+      console.log(req.file);
         if (!req.file) {
             return res.status(404).json({
                 error: "No file attached"

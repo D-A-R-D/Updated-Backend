@@ -57,7 +57,7 @@ router.post('/', (req, res) => {
         //Response ->link
         const response = await file.save();
         return res.json({
-            'file': `${process.env.APP_BASE_URL}/files/${response.uuid}`
+            'link': `${process.env.APP_BASE_URL}/files/${response.uuid}`
         });
     })
 
